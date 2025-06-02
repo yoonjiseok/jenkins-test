@@ -1,0 +1,12 @@
+pipeline{
+    agent any
+    stages{
+        stage("Compile"){
+            steps{  sh"./gradlewcompileJava"  }  }
+        stage("Build"){  steps{  sh"./gradlewbuild"  }  }
+        stage("Unittest"){  steps{  sh"./gradlewtest
+
+            }
+        }
+    }
+}
